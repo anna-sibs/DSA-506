@@ -17,7 +17,7 @@ filtered_df = df[df.year == year]
 
 # Create Plotly Scatter Plot
 fig = px.scatter(filtered_df, x="gdpPercap", y="lifeExp", size="pop", color="continent",
-                 hover_name="country", log_x=True, size_max=60)
-
+                 hover_name="country", log_x=True, size_max=60, )
+fig.update_layout(font_family="Courier New")
 # Display Plot
 st.plotly_chart(fig)
