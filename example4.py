@@ -38,14 +38,15 @@ with tab3:
 
 with tab4:
     # Arrange the plots in a grid layout
-  col1, col2 = st.columns(2)  # Create 2 columns
-  
-  with col1:
-      st.plotly_chart(fig1, use_container_width=True)  # First plot in first column
-  
-  with col2:
-      st.plotly_chart(fig2, use_container_width=True)  # Second plot in second column
-  
-  # Add the third plot in a full-width row below
-  st.plotly_chart(fig3, use_container_width=True)
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.plotly_chart(fig1, use_container_width=True)
+
+    with col2:
+        st.plotly_chart(fig2, use_container_width=True)
+
+    # Add the third plot in a full-width row below
+    st.plotly_chart(fig3, use_container_width=True)
+
 
