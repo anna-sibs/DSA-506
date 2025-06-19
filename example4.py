@@ -28,24 +28,24 @@ fig3 = px.line(filtered_df, x="country", y="gdpPercap", color="continent", title
 tab1, tab2, tab3, tab4 = st.tabs(["📌 Scatter Plot", "📊 Bar Chart", "📈 Line Chart", "🪟 Dashboard"])
 
 with tab1:
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig1, use_container_width=True, key="fig11")
 
 with tab2:
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, use_container_width=True, key="fig21")
 
 with tab3:
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, use_container_width=True, key="fig31")
 
 with tab4:
     with st.container():
         col1, col2 = st.columns(2)
 
         with col1:
-            st.plotly_chart(fig1, use_container_width=True)
+            st.plotly_chart(fig1, use_container_width=True, key="fig41")
 
         with col2:
-            st.plotly_chart(fig2, use_container_width=True)
+            st.plotly_chart(fig2, use_container_width=True, key="fig42")
 
-        st.plotly_chart(fig3, use_container_width=True)
+        st.plotly_chart(fig3, use_container_width=True, key="fig43")
 
 
