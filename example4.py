@@ -25,7 +25,7 @@ fig2 = px.bar(filtered_df, x="continent", y="pop", color="continent", title="Pop
 fig3 = px.line(filtered_df, x="country", y="gdpPercap", color="continent", title="GDP Per Capita by Country")
 
 # Layout - Using Tabs to Display Multiple Plots
-tab1, tab2, tab3 = st.tabs(["📌 Scatter Plot", "📊 Bar Chart", "📈 Line Chart"])
+tab1, tab2, tab3, tab4 = st.tabs(["📌 Scatter Plot", "📊 Bar Chart", "📈 Line Chart", "🪟 Dashboard"])
 
 with tab1:
     st.plotly_chart(fig1, use_container_width=True)
@@ -35,4 +35,17 @@ with tab2:
 
 with tab3:
     st.plotly_chart(fig3, use_container_width=True)
+
+with tab4:
+    # Arrange the plots in a grid layout
+  col1, col2 = st.columns(2)  # Create 2 columns
+  
+  with col1:
+      st.plotly_chart(fig1, use_container_width=True)  # First plot in first column
+  
+  with col2:
+      st.plotly_chart(fig2, use_container_width=True)  # Second plot in second column
+  
+  # Add the third plot in a full-width row below
+  st.plotly_chart(fig3, use_container_width=True)
 
