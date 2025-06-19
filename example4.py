@@ -41,14 +41,11 @@ with tab4:
         col1, col2 = st.columns(2)
 
         with col1:
-            st.write("Plot 1")
             st.plotly_chart(fig1, use_container_width=True)
 
         with col2:
-            st.write("Plot 2")
             st.plotly_chart(fig2, use_container_width=True)
 
-        st.write("Plot 3")
         st.plotly_chart(fig3, use_container_width=True)
 
 
